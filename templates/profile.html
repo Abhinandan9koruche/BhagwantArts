@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Bhagwant Art</title>
+    <style>
+        /* Profile page styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .profile-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group p {
+            margin: 5px 0;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .logout-btn, .submit-btn {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #dc3545;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout-btn:hover, .submit-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Profile - Bhagwant Art</h1>
+</header>
+
+<div class="profile-container">
+    <div class="profile-box">
+        <h2>Your Profile</h2>
+
+        <!-- Profile Form (to update the profile) -->
+        <form method="POST" action="{{ url_for('profile') }}">
+            <div class="form-group">
+                <label for="fullname"><strong>Full Name:</strong></label>
+                <input type="text" id="fullname" name="fullname" value="{{ user.fullname }}" required>
+            </div>
+            <div class="form-group">
+                <label for="username"><strong>Username:</strong></label>
+                <input type="text" id="username" name="username" value="{{ user.username }}" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" id="email" name="email" value="{{ user.email }}" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Update Profile</button>
+        </form>
+
+        <!-- Display user data after form submission -->
+        <div class="form-group">
+            <p><strong>Full Name:</strong> {{ user.fullname }}</p>
+            <p><strong>Username:</strong> {{ user.username }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+        </div>
+
+        <!-- Logout Button -->
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+</body>
+</html>

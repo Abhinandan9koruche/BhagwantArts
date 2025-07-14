@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagwant Art</title>
+    <style>
+        /* Basic Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #003366; 
+            padding: 15px 0;
+            color: white;
+        }
+
+        .header-container {
+            width: 90%;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo */
+        .logo img {
+            max-width:200px; /* Slightly smaller logo */
+        }
+
+        /* Navigation Menu */
+        nav {
+            flex-grow: 1;
+            margin-left: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #F5A623; 
+        }
+
+        /* Search Bar */
+        .search-bar {
+            position: relative;
+            flex-basis: 300px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            border-radius: 20px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px;
+            border: none;
+            background-color: #F5A623; 
+            color: white;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #E59416;
+        }
+
+
+        .main{
+            width: 100%;
+            height: 500px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 50px 0;
+            background-color: white;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #232F3E; /* Dark blue */
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 50px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            flex: 1 1 calc(20% - 20px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-item h3 {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .product-item p {
+            font-size: 14px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #232F3E;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 20px;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section p, .footer-section ul {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 0 20px;
+            }
+
+            .product-item {
+                flex: 1 1 100%;
+                max-width: 300px;
+            }
+
+            .search-bar input[type="text"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logpot-removebg-preview.png') }}" alt="Bhagwant Art">
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                     <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+                    <li><a href="{{ url_for('aboutus') }}">About</a></li>
+                    <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products..">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+    <title>Order Confirmation - Bhagwant Art</title>
+    <style>
+       
+      
+
+        /* Confirmation Container */
+        .confirmation-container {
+            width: 90%;
+            background-color: transparent;
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            perspective: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .confirmation-container-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: transform 0.6s;
+        }
+        .confirmation-container:hover .confirmation-container-inner {
+            transform: rotateY(180deg);
+        }
+        
+
+
+.confirmation-container-front, .confirmation-container-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+        }
+        .confirmation-container h1 {
+            font-size: 24px;
+            color: #232F3E;
+            margin-top: 20px;
+        }
+
+        .confirmation-container p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        .order-summary {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .order-summary h2 {
+            font-size: 20px;
+            color: #232F3E;
+            margin-bottom: 10px;
+        }
+
+        .order-summary p {
+            font-size: 16px;
+        }
+
+        .btn-return {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #232F3E;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-return:hover {
+            background-color: #F5A623;
+        }
+    </style>
+<div class="confirmation-container" id="confirmation-container">
+    <img src="{{ url_for('static', filename='checkmark.png') }}" alt="Order Success" />
+    <h1 id="confirmation-title">Order Placed Successfully!</h1>
+    <p id="confirmation-message">Thank you for your purchase! Your order has been placed successfully, and we are processing it now.</p>
+
+    <div class="order-summary" id="order-summary">
+        <h2>Order Summary</h2>
+        <p><strong>Estimated Delivery:</strong> 5-7 Business Days</p>
+    </div>
+
+    <button class="btn-return" onclick="goBackToShop()">Back to Shop</button>
+</div>
+
+<script>
+    // Product Data for the order
+ 
+function goBackToShop() {
+    window.location.href = "{{ url_for('homepage') }}"; // Redirect to the shop/home page
+}
+</script>
+
+     <!-- Footer Section -->
+     <footer>
+        <div class="footer-content">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h3>About Bhagwant Art</h3>
+                <p>We offer a wide range of divine idols and artifacts to enhance your spiritual and aesthetic needs.</p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                     <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+                    <li><a href="{{ url_for('aboutus') }}">About</a></li>
+                    <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:SanketKmbhar@bhagwantart.com">SanketKmbhar@bhagwantart.com</a></p>
+                <p>Phone: +91 8767377982</p>
+                <p>Phone: +91 9921130929</p>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            
+            <p>&copy; 2024 Bhagwant Art | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="{{ url_for('termsandconditions') }}">Privacy Policy</a>
+                <a href="{{ url_for('termsandconditions') }}">Terms of Service</a>
+                <a href="{{ url_for('termsandconditions') }}">Help Center</a>
+            </div>
+        </div>
+    </footer>

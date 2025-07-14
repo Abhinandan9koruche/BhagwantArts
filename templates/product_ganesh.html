@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagwant Art - ProductGanesh</title>
+    <style>
+        /* General Styling */
+        body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff2cc;
+    color: #333;
+   
+    position: absolute;
+  
+   
+}
+
+/* Header Section */
+header {
+    background-color: #003366; 
+    padding: 15px 0;
+    color: #FFFFFF;
+}
+
+.header-container {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    max-width:200px; /* Slightly smaller logo */
+}
+
+/* Navigation Menu */
+nav {
+    flex-grow: 1;
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    font-style: Gray;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F5A623; 
+}
+
+/* Search Bar */
+.search-bar {
+    position: relative;
+    flex-basis: 300px;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    border: none;
+    background-color: #F5A623; 
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #E59416;
+}
+
+
+        /* Product Section */
+        .products {
+            padding: 50px 0;
+            background-color: white;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #232F3E;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 50px;
+        }
+        
+        a {
+    text-decoration: none;
+}
+
+/* Optional: Add hover effects to anchors for better UX */
+a:hover {
+    text-decoration: none; /* Ensure no underline on hover as well */
+     /* Add a color change for better interaction feedback */
+}
+        .product-item {
+    text-align: center;
+    width: 200px; /* Adjust width as needed */
+    margin: 0 auto; /* This centers the entire product-item container */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensure the image fits within its container */
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-item h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.product-item p {
+    margin: 5px 0;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.review {
+    font-style: italic;
+    color: #777;
+}
+
+.size {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Styled Product Title with Icon */
+        .product-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #232F3E;
+        }
+
+        .product-title img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .product-item p {
+            font-size: 14px;
+        }
+
+       
+      /* Footer Section */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 40px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Optional: Add hover effects to anchors for better UX */
+a:hover {
+    text-decoration: none; 
+    color: #FFFFFF;/* Ensure no underline on hover as well */
+     /* Add a color change for better interaction feedback */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #008080;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .product-item {
+        flex: 1 1 100%;
+        max-width: 300px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+        }
+    </style>
+
+<body>
+    <!-- Header Section -->
+    <header>
+     <div class="header-container">
+         <!-- Logo -->
+         <div class="logo">
+             <img src="{{ url_for('static', filename='logpot-removebg-preview.png') }}" alt="Bhagwant Art">
+         </div>
+ 
+         <!-- Navigation Menu -->
+         <nav>
+             <ul>
+                 <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                  <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+                 <li><a href="{{ url_for('aboutus') }}">About</a></li>
+                 <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+             </ul>
+         </nav>
+ 
+         <!-- Search Bar -->
+         <div class="search-bar">
+             <input type="text" placeholder="Search for products..">
+             <button>🔍</button>
+         </div>
+     </div>
+ </header>  
+   <!-- Products Section -->
+<section id="shop" class="products">
+    <h2 style="font-family: 'Times New Roman', Times, serif;">Our Ganesh Products</h2>
+    <div class="product-grid">
+        <!-- Ganesh Idols -->
+        <div class="product-item">
+            <a href="{{ url_for('Ganesh5') }}">
+                <img src="{{ url_for('static', filename='pganesh4.jpg') }}" alt="Ganesh Idol 1" class="img">
+                <h3>Ganesh Idol 1</h3>
+                <p>Beautifully crafted Ganesh idol for your home or office.</p>
+                <div class="rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="reviews">(20 reviews)</span>
+                </div>
+                <p class="price">₹1000</p>
+                <p class="review">“Absolutely stunning! It has brightened our festival celebrations.” - Rahul K.</p>
+                <p class="size">Available sizes: 1.5ft, 3ft, 6ft</p>
+            </a>
+        </div>
+       
+                
+        <div class="product-item"  >
+            <a href="{{ url_for('Ganesh2') }}" >
+                <img src="{{ url_for('static', filename='pganesh1.jpg') }}" alt="Ganesh Idol 2" > 
+                <h3>Ganesh Idol 2</h3>
+                <p>Beautifully crafted Ganesh idol for your home or office.</p>
+                <div class="rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="reviews">(40 reviews)</span>
+                </div>
+                <p class="price">₹800</p>
+                <p class="review">"Invoke the blessings of Lord Ganesha for wisdom, prosperity, and peace." -Sanket kumbhar</p>
+                <p class="size">Available sizes: 1.5ft, "3ft", 6ft</p>
+    
+            </a>
+        
+        </div>
+        
+      
+
+<div class="product-item">
+    <a href="{{ url_for('Ganesh3') }}">
+        <img src="{{ url_for('static', filename='pganesh2.jpg') }}" alt="Ganesh Idol 3">
+        <h3>Ganesh Idol 3</h3>
+        <p>Beautifully crafted Ganesh idol for your home or office.</p>
+        <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(35 reviews)</span>
+        </div>
+        <p class="price">₹850</p>
+        <p class="review">. "May Lord Ganesha remove all obstacles and guide you toward success." - Daksha</p>
+        <p class="size">Available sizes: 1.5ft," 3ft", 6ft</p>
+
+    </a>
+
+</div>
+
+<div class="product-item">
+    <a href="{{ url_for('Ganesh4') }}">
+        <img src="{{ url_for('static', filename='pganesh3.jpg') }}" alt="Ganesh Idol 4">
+        <h3>Ganesh Idol 4</h3>
+        <p>Beautifully crafted Ganesh idol for your home or office.</p>
+        <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(45 reviews)</span>
+        </div>
+        <p class="price">₹900</p>
+        <p class="review"> "Bring home the divine presence of Ganpati for new beginnings and joy."- Abhinandahan koruche</p>
+        <p class="size">Available sizes: 1.5ft, "3ft" ,6ft</p>
+    </a>
+</div>
+
+
+<div class="product-item">
+    <a href="{{ url_for('Ganesh5') }}">
+        <img src="{{ url_for('static', filename='pganesh4.jpg') }}" alt="Ganesh Idol 5">
+        <h3>Ganesh Idol 5</h3>
+        <p>Beautifully crafted Ganesh idol for your home or office.</p>
+        <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(20 reviews)</span>
+        </div>
+        <p class="price">₹1,000</p>
+        <p class="review">"Let Ganpati Bappa fill your life with happiness, wisdom, and good fortune." - Aditi K.</p>
+        <p class="size">Available sizes: 1.5ft, "3ft", 6ft</p>
+
+    </a>
+</div>
+<div class="product-item">
+    <a href="{{ url_for('Ganesh6') }}">
+        <img src="{{ url_for('static', filename='pganesh5.jpg') }}" alt="Ganesh Idol 6">
+        <h3>Ganesh Idol 6</h3>
+        <p>Beautifully crafted Ganesh idol for your home or office.</p>
+        <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(30 reviews)</span>
+        </div>
+        <p class="price">₹1,100</p>
+        <p class="review">. "Celebrate every moment with the grace and blessings of Lord Ganesha." - Sanket K.</p>
+        <p class="size">Available sizes: 1.5ft, 3ft, 6ft</p>
+    </a>
+
+</div>
+
+<div class="product-item">
+    <a href="{{ url_for('Ganesh7') }}">
+        <img src="{{ url_for('static', filename='pganesh2.jpg') }}" alt="Ganesh Idol 7">
+        <h3>Ganesh Idol 7</h3>
+        <p>Beautifully crafted Ganesh idol for your home or office.</p>
+        <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(30 reviews)</span>
+        </div>
+        <p class="price">₹1,100</p>
+        <p class="review">"Invite the remover of obstacles, Lord Ganesha, to bless your home and heart." - Sanket K.</p>
+        <p class="size">Available sizes: 1.5ft, 3ft, 6ft</p>
+
+    </a>
+
+</div>
+
+
+<div class="product-item">
+    <a href="{{ url_for('Ganesh8') }}">
+        <img src="{{ url_for('static', filename='pganesh6.jpg') }}" alt="Ganesh Idol 8">
+        <h3>Ganesh Idol 8</h3>
+        <p>Beautifully crafted Ganesh idol for your home or office.</p>
+        <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(50 reviews)</span>
+        </div>
+        <p class="price">₹1,200</p>
+        <p class="review">. "May Ganpati’s presence fill your space with peace and prosperity." - Shiva K.</p>
+        <p class="size">Available sizes: 1.5ft, 3ft, 6ft</p>
+
+    </a>
+
+</div>
+
+
+<div class="product-item">
+    <a href="{{ url_for('Ganesh9') }}">
+        <img src="{{ url_for('static', filename='pganesh3.jpg') }}" alt="Ganesh Idol 9">
+        <h3>Ganesh Idol 9</h3>
+        <p>Beautifully crafted Ganesh idol for your home or office.</p>
+        <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(25 reviews)</span>
+        </div>
+        <p class="price">₹1300</p>
+        <p class="review">"Embrace the power of Lord Ganesha for a future filled with growth and success." - Sanket K.</p>
+        <p class="size">Available sizes: 1.5ft, 3ft, 6ft</p>
+
+    </a>
+
+</div>
+
+       
+        <!-- For example, add Ganesh Idol 3, 4, and so on up to Ganesh Idol 15 with size options -->
+
+        <div class="product-item">
+            <a href="{{ url_for('Ganesh10') }}">
+                <img src="{{ url_for('static', filename='pganesh5.jpg') }}" alt="Ganesh Idol 10">
+                <h3>Ganesh Idol 10</h3>
+                <p>Beautifully crafted Ganesh idol for your home or office.</p>
+                <div class="rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="reviews">(25 reviews)</span>
+                </div>
+                <p class="price">₹1,300</p>
+                <p class="review">"Start your journey with the blessings of Ganpati, the harbinger of good luck." - Shivani kumbhar</p>
+                <p class="size">Available sizes: 1.5ft, 3ft, 6ft</p>
+        
+            </a>
+        
+        </div>
+        
+       
+    </div>
+</section>
+
+<style>
+    /* Style for the products section */
+    .products {
+        padding: 40px;
+        text-align: center;
+        background-color: #f9f9f9;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product-item {
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .product-item img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .product-item h3 {
+        margin-top: 10px;
+        color: #333;
+    }
+
+    .product-item p {
+        margin: 10px 0;
+        color: #555;
+    }
+
+    .rating .stars {
+        color: gold;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #E59416;
+    }
+
+    .size {
+        color: #777;
+        font-style: italic;
+    }
+
+    .review {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+</style>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h3>About Bhagwant Art</h3>
+                <p>We offer a wide range of divine idols and artifacts to enhance your spiritual and aesthetic needs.</p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                 <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About</a></li>
+                <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:SanketKmbhar@bhagwantart.com">SanketKmbhar@bhagwantart.com</a></p>
+                <p>Phone: +91 8767377982</p>
+                <p>Phone: +91 9921130929</p>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            
+            <p>&copy; 2025 Bhagwant Art | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="{{ url_for('termsandconditions') }}">Privacy Policy</a>
+                <a href="{{ url_for('termsandconditions') }}">Terms of Service</a>
+                 <a href="{{ url_for('termsandconditions') }}">Help Center</a>
+            </div>
+        </div>    
+    </footer>
+    

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BhagwantArts</title>
+    <style>
+         body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff2cc;
+    color: #333;
+   
+    position: absolute;
+   
+}
+
+/* Header Section */
+header {
+    background-color: #003366; 
+    padding: 15px 0;
+    color: #FFFFFF;
+}
+
+.header-container {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    max-width:200px; /* Slightly smaller logo */
+}
+
+/* Navigation Menu */
+nav {
+    flex-grow: 1;
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    font-style: Gray;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F5A623; 
+}
+
+/* Search Bar */
+.search-bar {
+    position: relative;
+    flex-basis: 300px;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    border: none;
+    background-color: #F5A623; 
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #E59416;
+}
+
+.login-button {
+    position: relative;
+    right :-30px;
+    background-color: #F5A623; /* Attractive button color */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #E59416;
+}
+
+.main{
+    width: 100%;
+    height: 500px;
+    border-color: #555;
+    border-radius: 10px;
+}
+
+
+/* Video Container */
+
+.video {
+    width: auto;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-width: 5px ;
+    border-color: #000;
+    border: 2px solid #616260; /* Add a border for better visibility */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: #ffffff;
+}
+
+/* Video Element Styling */
+.video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fits the container without distortion */
+    border-radius: 15px; /* Matches the container's rounded corners */
+}
+
+
+.table{
+    width:auto;
+    height: 300px;
+}
+
+.Welcomegra {
+    margin: 20px auto;
+    
+   
+    background-size: 30%;
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.text-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #bff3f3;
+}
+/* Highlight Text */
+.highlight-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 0;
+}
+
+.animated {
+    opacity: 0; /* Initial state */
+    animation: fadeInZoomOut 8s infinite; /* Default animation */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #DC143C;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #F5A623;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInZoomOut {
+    0% { opacity: 0; transform: scale(0.5); }
+    25% { opacity: 1; transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+@keyframes slideRight {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(100%); opacity: 0; }
+    50% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100%); opacity: 0; }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100%); opacity: 0; }
+    50% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes spinLeft {
+    0% { transform: rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: rotate(-360deg); opacity: 0; }
+}
+
+@keyframes spinRight {
+    0% { transform: rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: rotate(360deg); opacity: 0; }
+}
+
+/* Apply animations to specific elements */
+
+
+.highlight-text {
+    animation: slideRight 13s infinite;
+}
+
+#feature-text {
+    animation: slideUp 13s infinite;
+}
+
+
+
+/* Products Section */
+
+/* Remove underline from all anchor tags */
+a {
+    text-decoration: none;
+}
+
+/* Optional: Add hover effects to anchors for better UX */
+a:hover {
+    text-decoration: none; /* Ensure no underline on hover as well */
+     /* Add a color change for better interaction feedback */
+}
+
+.products {
+    padding: 50px 0;
+    background-color: #fbfbde;
+    border: #E0E0E0;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #232F3E; /* Dark blue */
+    margin-bottom: 40px;
+    
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.product-item {
+    background-color: #F5F5DC;
+    border: 1px solid #f3f3bc;
+    padding: 20px;
+    text-align: center;
+
+    border-radius: 10px;
+    flex: 1 1 calc(20% - 20px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-item h3 a {
+    margin: 15px 0;
+    font-size: 18px;
+   ;
+}
+
+.product-item p {
+    font-size: 14px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 40px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Optional: Add hover effects to anchors for better UX */
+a:hover {
+    text-decoration: none; 
+    color: #FFFFFF;/* Ensure no underline on hover as well */
+     /* Add a color change for better interaction feedback */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #008080;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .product-item {
+        flex: 1 1 100%;
+        max-width: 300px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+} 
+    </style>
+</head>
+
+    <body>
+        <!-- Header Section -->
+        <header>
+            <div class="header-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='logpot-removebg-preview.png') }}" alt="Bhagwant Art">
+                </div>
+    
+                <!-- Navigation Menu -->
+                <nav>
+                    <ul>
+                        <!--<li><a href="{{ url_for('homepage') }}">Home</a></li>-->
+                        <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                        <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+                        <li><a href="{{ url_for('aboutus') }}">About</a></li>
+                        <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+                    </ul>
+                </nav>
+    
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <form action="{{ url_for('search_results') }}" method="get">
+                        <input type="text" name="q" placeholder="Search for products..." required>
+                        <button type="submit">Search</button>
+                    </form>                    
+                </div>
+                <!-- Login/Profile Button -->
+        <!-- Login/Profile and Logout Button -->
+        {% if session.get('user_logged_in') %}
+            <!-- Profile Button -->
+            <a href="{{ url_for('profile') }}" class="login-button">Profile</a>
+            <!-- Logout Button -->
+            <a href="{{ url_for('logout') }}" class="login-button">Logout</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="login-button">Login</a>
+        {% endif %}
+            </div>
+        </header>
+        <div  class="main">
+            <img src="{{ url_for('static', filename='banner.png') }}" width="100%" height="500px">
+           </div>
+               
+                <div class="text-container"   width="100%" >
+                        <!-- Welcome Graphic Animation -->
+                        
+                            <div class="Welcomegra">
+                                <img src="{{ url_for('static', filename='ganeha13.png') }}" alt="" height="180px">
+                        </div>
+                
+                        
+                        <!-- Welcome -->
+                        <p class="highlight-text">Welcome to Bhagwant Art</p>
+                    <div class="feature-text-container">
+                        <p class="feature-text" id="feature-text"></p>
+                    </div>
+                   
+                    <div class="cta-container">
+                        <a href="{{ url_for('product_ganesh') }}" class="cta-button">Explore Products</a>
+                        <a href="{{ url_for('confirmation_of_booking') }}" class="cta-button">Pre-Book Now</a>
+                    </div>
+                </div>
+        
+        <!-- JavaScript to animate feature text -->
+    <!-- JavaScript -->
+    <script>
+        const features = [
+            "Explore a Wide Variety of Clay Pots",
+            "Shop Handcrafted Ganesh Idols",
+            "Pre-Book Exclusive Festival Diyas",
+            "Personalized Home Décor Solutions",
+            "Fast and Secure Online Booking"
+        ];
+
+        const featureTextElement = document.getElementById("feature-text");
+        let index = 0;
+
+        // Function to loop through features and display them
+        function displayFeatures() {
+            setInterval(() => {
+                featureTextElement.textContent = features[index];
+                featureTextElement.style.opacity = 1; // Fade in
+                setTimeout(() => {
+                    featureTextElement.style.opacity = 0; // Fade out
+                }, 2000); // Keep text visible for 2 seconds
+                index = (index + 1) % features.length; // Loop back to the start
+            }, 3000); // Total interval (2s display + 1s transition)
+        }
+
+        // Start the feature animation
+        displayFeatures();
+    </script>
+    </table>
+    
+    
+        <!-- Products Section -->
+        <section id="shop" class="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <a href="{{ url_for('product_pots') }}">
+                    <img src="{{ url_for('static', filename='pot1.1.jpeg') }}" alt="Clay Pots">
+                    <h3>Clay Pots</h3>
+                    <p>Handcrafted clay pots for all your needs.</p>
+                </a>
+                </div>
+    
+                <div class="product-item">
+                <a href="{{ url_for('product_ganesh') }}">
+                    <img src="{{ url_for('static', filename='ganesh.png') }}" alt="Ganesh Idols">
+                    <h3>Ganesh Idols</h3>
+                    <p>Beautifully crafted Ganesh idols for your home.</p>
+                </a>
+                </div>
+    
+                <div class="product-item">
+                    <a href="{{ url_for('product_diyas') }}">
+                    <img src="{{ url_for('static', filename='diwalidiyasimple2.jpg') }}" alt="Diwali Diyas">
+                    <h3>Diwali Diyas</h3>
+                    <p>Brighten up your festivals with our diyas.</p>
+                </a>
+                </div>
+    
+                <div class="product-item">
+                    <a href="{{ url_for('product_decorativeitems') }}">
+                    <img src="{{ url_for('static', filename='deco2.jpg') }}" alt="Decorative Items">
+                    <h3>Decorative Items</h3>
+                    <p>Perfect decorative pieces for your home or office.</p>
+                </a>
+                </div>
+    
+                <div class="product-item">
+                    <a href="{{ url_for('product_ox') }}">
+                    <img src="{{ url_for('static', filename='ox.png') }}" alt="Ox and Cow Idols">
+                    <h3>Ox and Cow Idols</h3>
+                    <p>Traditional ox and cow idols for festive decor.</p>
+                </a>
+                </div>
+    
+            </div>
+             
+            <script>
+                // Get the product from the URL parameter
+                const urlParams = new URLSearchParams(window.location.search);
+                const productId = urlParams.get('product');
+            
+                // Based on the productId, you can display product-specific details here
+                document.querySelector('#product-title').textContent = Product ${productId};
+                // Fetch other product details accordingly
+            </script>
+        </section>
+    
+        <!-- Footer Section -->
+         <!-- Footer Section -->
+         <footer>
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section about">
+                    <h3>About Bhagwant Art</h3>
+                    <p>We offer a wide range of divine idols and artifacts to enhance your spiritual and aesthetic needs.</p>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                   <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                    <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+                    <li><a href="{{ url_for('aboutus') }}">About</a></li>
+                    <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Section -->
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:SanketKmbhar@bhagwantart.com">SanketKmbhar@bhagwantart.com</a></p>
+                    <p>Phone: +91 8767377982</p>
+                    <p>Phone: +91 9921130929</p>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                
+                <p>&copy; 2024 Bhagwant Art | All Rights Reserved</p>
+                <div class="footer-links">
+                    <a href="{{ url_for('termsandconditions') }}">Privacy Policy</a>
+                    <a href="{{ url_for('termsandconditions') }}">Terms of Service</a>
+                    <a href="{{ url_for('termsandconditions') }}">Help Center</a>
+                </div>
+            </div>    
+        </footer>
+</body>
+</html>        

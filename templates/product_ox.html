@@ -1,0 +1,448 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagwant Art - ProductOx</title>
+    <style>
+        /* General Styling */
+        body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff2cc;
+    color: #333;
+   
+    position: absolute;
+  
+   
+}
+
+/* Header Section */
+header {
+    background-color: #003366; 
+    padding: 15px 0;
+    color: #FFFFFF;
+}
+
+.header-container {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    max-width:200px; /* Slightly smaller logo */
+}
+
+/* Navigation Menu */
+nav {
+    flex-grow: 1;
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    font-style: Gray;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F5A623; 
+}
+
+/* Search Bar */
+.search-bar {
+    position: relative;
+    flex-basis: 300px;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    border: none;
+    background-color: #F5A623; 
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #E59416;
+}
+
+        /* Product Section */
+        .products {
+            padding: 50px 0;
+            background-color: white;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #232F3E;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 50px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            flex: 1 1 calc(20% - 20px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Styled Product Title with Icon */
+        .product-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #232F3E;
+        }
+
+        .product-title img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .product-item p {
+            font-size: 14px;
+        }
+
+        /* Footer Section */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 40px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Optional: Add hover effects to anchors for better UX */
+a:hover {
+    text-decoration: none; 
+    color: #FFFFFF;/* Ensure no underline on hover as well */
+     /* Add a color change for better interaction feedback */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #008080;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .product-item {
+        flex: 1 1 100%;
+        max-width: 300px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+        }
+    </style>
+
+<body>
+    <!-- Header Section -->
+    <header>
+     <div class="header-container">
+         <!-- Logo -->
+         <div class="logo">
+             <img src="{{ url_for('static', filename='logpot-removebg-preview.png') }}" alt="Bhagwant Art">
+         </div>
+ 
+         <!-- Navigation Menu -->
+         <nav>
+             <ul>
+                 <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                  <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+                 <li><a href="{{ url_for('aboutus') }}">About</a></li>
+                 <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+             </ul>
+         </nav>
+ 
+         <!-- Search Bar -->
+         <div class="search-bar">
+             <input type="text" placeholder="Search for products..">
+             <button>🔍</button>
+         </div>
+     </div>
+ </header>  
+<!-- Products Section -->
+
+ <section id="shop" class="products">
+     <h2 style="font-family: 'Times New Roman', Times, serif;">Our Decorative item Products</h2>
+     <div class="product-grid">
+         <!-- Ganesh Idols -->
+         
+         <div class="product-item">
+             <a href="{{ url_for('ox1') }}">
+                 <img src="{{ url_for('static', filename='ox1im.jpeg') }}" alt="Ox Idol">
+                 <h3>Ox Idol 1 </h3>
+                 <p>Ideal for both decorative and religious purposes, adding spiritual charm to your space.
+                     Crafted from high-quality materials, ensuring durability and elegance.</p>
+                 <div class="rating">
+                     <span class="stars">★★★★★</span>
+                     <span class="reviews">(23 reviews)</span>
+                 </div>
+                 <p class="price">₹650</p>
+                 <p class="review">“The detailing on the Ox Idols is amazing, perfect for our festive décor.” - Rajesh V.</p>
+                 <p class="size">Available sizes: Up to 1 feet inches</p>
+             </a>
+         </div>
+         
+         
+         <div class="product-item">
+             <a href="{{ url_for('ox2') }}">
+                 <img src="{{ url_for('static', filename='ox2im.jpeg') }}" alt="Ox Idol 3">
+                 <h3>Ox Idol 2 </h3>
+                 <p>Each piece is meticulously designed, showcasing intricate artistry.
+                     </p>
+                 <div class="rating">
+                     <span class="stars">★★★★★</span>
+                     <span class="reviews">(20 reviews)</span>
+                 </div>
+                 <p class="price">₹550</p>
+                 <p class="review">“The detailing on the Ox Idols is amazing, perfect for our festive décor.” - Rajesh V.</p>
+                 <p class="size">Available sizes: Up to 1 feet inches</p>
+             </a>
+         </div>
+         <div class="product-item">
+             <a href="{{ url_for('ox3') }}">
+                 <img src="{{ url_for('static', filename='ox3im.jpeg') }}" alt="Ox Idol 3">
+                 <h3>Ox Idol 3</h3>
+                 <p>Elevate your home décor with our beautifully hand-crafted Ox Idol set.
+                     </p>
+                 <div class="rating">
+                     <span class="stars">★★★★★</span>
+                     <span class="reviews">(15 reviews)</span>
+                 </div>
+                 <p class="price">₹900</p>
+                 <p class="review">“The detailing on the Ox Idols is amazing, perfect for our festive décor.” - Rajesh V.</p>
+                 <p class="size">Available sizes: Up to 1 feet inches</p>
+             </a>
+         </div>
+     </div>
+ </section>
+<style>
+    /* Style for the products section */
+    .products {
+        padding: 40px;
+        text-align: center;
+        background-color: #f9f9f9;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .product-item {
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .product-item img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .product-item h3 {
+        margin-top: 10px;
+        color: #333;
+    }
+
+    .product-item p {
+        margin: 10px 0;
+        color: #555;
+    }
+
+    .rating .stars {
+        color: gold;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #E59416;
+    }
+
+    .size {
+        color: #777;
+        font-style: italic;
+    }
+
+    .review {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+</style>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+</section>
+
+<footer>
+    <div class="footer-content">
+        <!-- About Section -->
+        <div class="footer-section about">
+            <h3>About Bhagwant Art</h3>
+            <p>We offer a wide range of divine idols and artifacts to enhance your spiritual and aesthetic needs.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+            <li><a href="{{ url_for('homepage') }}">Home</a></li>
+             <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+            <li><a href="{{ url_for('aboutus') }}">About</a></li>
+            <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:SanketKmbhar@bhagwantart.com">SanketKmbhar@bhagwantart.com</a></p>
+            <p>Phone: +91 8767377982</p>
+            <p>Phone: +91 9921130929</p>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        
+        <p>&copy; 2025 Bhagwant Art | All Rights Reserved</p>
+        <div class="footer-links">
+            <a href="{{ url_for('termsandconditions') }}">Privacy Policy</a>
+            <a href="{{ url_for('termsandconditions') }}">Terms of Service</a>
+             <a href="{{ url_for('termsandconditions') }}">Help Center</a>
+        </div>
+    </div>    
+</footer>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .search-results {
+            margin: 20px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .product h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .product p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="search-results">
+    {% if results %}
+        <p>Found {{ results|length }} result{% if results|length > 1 %}s{% endif %} for your search:</p>
+        {% for product in results %}
+            <div class="product">
+                <h2>{{ product.name }}</h2>
+                <p><strong>Category:</strong> {{ product.category }}</p>
+                <p><strong>Price:</strong> ${{ product.price }}</p>
+                <p>{{ product.description }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No results found. Please try a different search query.</p>
+    {% endif %}
+</div>
+</body>
+</html>

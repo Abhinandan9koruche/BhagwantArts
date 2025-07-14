@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagwant Art - Diyas2</title>
+    <style>
+        /* General Styling */
+        body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff2cc;
+    color: #333;
+   
+    position: absolute;
+  
+   
+}
+
+/* Header Section */
+header {
+    background-color: #003366; 
+    padding: 15px 0;
+    color: #FFFFFF;
+}
+
+.header-container {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    max-width:200px; /* Slightly smaller logo */
+}
+
+/* Navigation Menu */
+nav {
+    flex-grow: 1;
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    font-style: Gray;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F5A623; 
+}
+
+/* Search Bar */
+.search-bar {
+    position: relative;
+    flex-basis: 300px;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    border: none;
+    background-color: #F5A623; 
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #E59416;
+}
+
+
+        /* Product Section */
+        .product-details {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 0px;
+        }
+
+        .product-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .product-image img {
+            max-width: 70%;
+            max-height: 220px;
+            object-fit: contain;
+        }
+
+        .product-info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .product-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #232F3E;
+        }
+
+        .product-info p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .product-price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #F5A623;
+            margin: 15px 0;
+        }
+
+        .rating {
+            color: rgb(101, 221, 183);
+        }
+        .order-button button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-button .btn-place-order {
+            background-color: #F5A623;
+            color: white;
+        }
+
+        .order-button .btn-place-order:hover {
+            background-color: #E59416;
+        }
+
+        .order-button .btn-book-now {
+            background-color: #232F3E;
+            color: white;
+        }
+
+        .order-button .btn-book-now:hover {
+            background-color: #1D2937;
+        }
+
+      /* Footer Section */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 40px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Optional: Add hover effects to anchors for better UX */
+a:hover {
+    text-decoration: none; 
+    color: #FFFFFF;/* Ensure no underline on hover as well */
+     /* Add a color change for better interaction feedback */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #008080;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .product-item {
+        flex: 1 1 100%;
+        max-width: 300px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+} 
+    </style>
+</head>
+<body>
+   <!-- Header Section -->
+   <header>
+    <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logpot-removebg-preview.png') }}" alt="Bhagwant Art">
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                 <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About</a></li>
+                <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products..">
+            <button>🔍</button>
+        </div>
+    </div>
+</header>  
+<section>
+<div class="container">
+    <div class="product-details">
+        <div class="product-image">
+            <img src="{{ url_for('static', filename='diwalidiyasimple2.jpg') }}" alt="Diwali Diya">
+        </div>
+        <div class="product-info">
+            <h2>Diwali Diya</h2>
+            <p>Brighten your festivities with our hand-painted, traditional Diwali Diyas, crafted from eco-friendly clay.</p>
+            <p class="rating">★★★★☆ (25 reviews)</p>
+            <p class="product-price">₹300</p>
+            <p><strong>Theme:</strong> Diwali Diya</p>
+            <p><strong>Brand:</strong> BhagwantArt</p>
+            <p><strong>Item:</strong> 40</p>
+            <p><strong>Material:</strong> Diya</p>
+            <p><strong>Dimensions:</strong> 5L x 5W x 3H Centimeters</p>
+            <div class="order-button">
+                <button class="btn-place-order" onclick="placeOrder()">Place Order</button>
+                <button class="btn-book-now" onclick="bookNow()">Book Now</button>
+            </div>
+        
+        
+        </div>
+    </div>
+</div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <!-- About Section -->
+        <div class="footer-section about">
+            <h3>About Bhagwant Art</h3>
+            <p>We offer a wide range of divine idols and artifacts to enhance your spiritual and aesthetic needs.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+            <li><a href="{{ url_for('homepage') }}">Home</a></li>
+             <li><a href="{{ url_for('product_ganesh') }}">Products</a></li>
+            <li><a href="{{ url_for('aboutus') }}">About</a></li>
+            <li><a href="{{ url_for('contactus') }}">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:SanketKmbhar@bhagwantart.com">SanketKmbhar@bhagwantart.com</a></p>
+            <p>Phone: +91 8767377982</p>
+            <p>Phone: +91 9921130929</p>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        
+        <p>&copy; 2025 Bhagwant Art | All Rights Reserved</p>
+        <div class="footer-links">
+            <a href="{{ url_for('termsandconditions') }}">Privacy Policy</a>
+                    <a href="{{ url_for('termsandconditions') }}">Terms of Service</a>
+                     <a href="{{ url_for('termsandconditions') }}">Help Center</a>
+        </div>
+    </div>    
+</footer>
+
+<script>
+    function placeOrder() {
+        alert("Your order has been placed successfully!");
+        window.location.href = "{{ url_for('confirmation_of_order') }}";
+    }
+</script>
+</body>
+</html>
+
